@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhom 10</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .sidebar {
+            width: 20%;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin-bottom: 10px;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+            cursor: pointer;
+        }
+        iframe {
+            width: 75%;
+            height: 90vh;
+            border: 1px solid #ccc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Thiết kế một trang web hoàn chỉnh</h1>
+
+    <div class="container">
+        <!-- Sidebar với danh sách lựa chọn -->
+        <div class="sidebar">
+            <ol type="A">
+                <li><a onclick="loadContent('header.html')">header</a></li>
+                <li><a onclick="loadContent('locialLogin.html')">Locial login</a></li>
+                <li><a onclick="loadContent('formLogin.html')">Form login</a></li>
+                <li><a onclick="loadContent('options.html')">Options</a></li>
+                <li><a onclick="loadContent('login.html')">Trang hoàn chỉnh</a></li>
+            </ol>
+        </div>
+
+        <iframe id="contentFrame" src="" title="Nội dung trang"></iframe>
+    </div>
+
+    <script>
+        function loadContent(page) {
+            document.getElementById('contentFrame').src = page;
+        }
+    </script>
+</body>
+</html>

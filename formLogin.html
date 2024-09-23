@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div style="display: flex; justify-content: center; gap:0px; color:white">
+        <div>
+            <h2>HTML</h2>
+            <pre>
+&lt;form class=&quot;login_form&quot;&gt;
+    &lt;div class=&quot;login&quot;&gt;
+        &lt;div class=&quot;text_login&quot;&gt;
+            &lt;label for=&quot;login-username&quot;&gt;
+                &lt;span&gt;Email hoặc tên người dùng&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;input class=&quot;login_input&quot; id=&quot;login-username&quot;
+         placeholder=&quot;Email hoặc tên người dùng&quot; type=&quot;text&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;login&quot;&gt;
+        &lt;div class=&quot;text_login&quot;&gt;
+            &lt;label for=&quot;login-password&quot;&gt;
+                &lt;span&gt;Mật khẩu&lt;/span&gt;
+            &lt;/label&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;container_password&quot;&gt;
+            &lt;input class=&quot;login_input&quot; 
+            id=&quot;login-password&quot; placeholder=&quot;Mật khẩu&quot; type=&quot;password&quot;&gt;
+            &lt;div class=&quot;show_hide_container&quot;&gt;
+                &lt;div class=&quot;show_hide_button&quot;&gt;
+                    &lt;span&gt;
+                        &lt;i id=&quot;toggler&quot; class=&quot;hide_password_icon&quot;&gt;&lt;/i&gt;
+                    &lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;button_login&quot;&gt;
+        &lt;button&gt;
+            &lt;span class=&quot;button_inner&quot;&gt;
+                &lt;span&gt;Đăng nhập&lt;/span&gt;
+            &lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+            </pre>
+            <h2>CSS</h2>
+            <pre>
+.login_form{
+    width: 324px;
+    margin: 0px auto;
+    padding-bottom: 0px;
+}
+.login{
+    padding-bottom: 16px;
+}
+.text_login{
+    box-sizing: border-box;
+    font-size: 14px;
+    margin: 0px;
+    font-weight: 700;
+    font-family: sans-serif;
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    inline-size: 100%;
+    padding-block-end: 8px;
+}
+.container_password{
+    position: relative;
+    width: 100%;
+}
+.login_input{
+    appearance: none;
+    background-image: none;
+    border: 0px;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    font-family: sans-serif;
+    transition: box-shadow 0.1s ease-in-out 0s, color 0.1s ease-in-out 0s;
+    inline-size: 100%;
+    box-sizing: border-box;
+    margin-block: 0px;
+    border-radius: 4px;
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+    padding-block-start: 12px;
+    padding-block-end: 12px;
+    min-block-size: 48px;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 1px #b3b3b3;
+    color: #ffffff;
+}
+.login_input:hover{
+    box-shadow: inset 0 0 0 1px #ffffff;
+}
+.login_input:focus{
+    box-shadow: inset 0 0 0 1px #ffffff;
+    border-color: #ffffff;
+    outline: 2px solid #ffffff;
+}
+.show_hide_container{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    color: #b3b3b3;
+    right: 12px;
+}
+.show_hide_button{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    background-color: transparent;
+    border: 0px;
+    border-radius: var(--encore-button-corner-radius, 9999px);
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    transition-property: background-color, border-color, color, box-shadow, filter, transform;
+    user-select: none;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    color: var(--text-subdued, #656565);
+    min-inline-size: 0px;
+    min-block-size: var(--encore-control-size-base, 48px);
+    padding-block-start: var(--encore-spacing-tighter, 12px);
+    padding-block-end: var(--encore-spacing-tighter, 12px);
+    padding-inline: 0px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.show_hide_button::after{
+    content: "";
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    transition: border-color 200ms ease-in;
+    box-sizing: border-box;
+    bottom: 5px;
+    border-bottom: 3px solid transparent;
+    width: 100%;
+    inline-size: 24px;
+}
+.toogler{
+    width: 24px;
+}
+.show_hide_button:hover::after{
+    border-bottom-color: #b3b3b3;
+}
+.show_hide_button:focus-visible::after{
+    border-bottom-color: #b3b3b3;
+}
+.show_hide_button span{
+    display: flex;
+}
+.show_password_icon{
+    background: url('/svg/show_eye.svg');
+    width: 24px;
+    height: 24px;
+}
+.hide_password_icon{
+    background: url('/svg/hide_eye.svg');
+    width: 24px;
+    height: 24px;
+}
+.button_login{
+    text-align: center;
+    padding: 24px 0px 32px 0px;
+}
+.button_login button{
+    width: 100%;
+    box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+   font-size: 1rem;
+   font-weight: 700;
+   font-family: sans-serif;
+   background-color: transparent;
+   border: 0px;
+   border-radius: 9999px;
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   text-align: center;
+   text-decoration: none;
+   text-transform: none;
+   touch-action: manipulation;
+   transition-duration: 33ms;
+   user-select: none;
+   vertical-align: middle;
+   transform: translate3d(0px, 0px, 0px);
+   padding: 0px;
+   min-inline-size: 0px;
+   align-self: center;
+}
+
+.button_inner{
+    box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+   position: relative;
+   background-color: #20d760;
+   color: #000000;
+   display: flex;
+   border-radius: 9999px;
+   font-size: inherit;
+   min-block-size: 48px;
+   -webkit-box-align: center;
+   align-items: center;
+   -webkit-box-pack: center;
+   justify-content: center;
+   padding-block-start: 8px;
+   padding-block-end: 8px;
+   padding-inline-start: 32px;
+   padding-inline-end: 32px;
+}
+.button_inner:hover{
+    outline: 5px solid #20d760;
+}
+            </pre>
+        </div>
+        <div class="box" style="justify-content: center;">
+            <form class="login_form">
+                <div class="login">
+                    <div class="text_login">
+                        <label for="login-username">
+                            <span>Email hoặc tên người dùng</span>
+                        </label>
+                    </div>
+                    <input class="login_input" id="login-username" placeholder="Email hoặc tên người dùng" type="text">
+                </div>
+                <div class="login">
+                    <div class="text_login">
+                        <label for="login-password">
+                            <span>Mật khẩu</span>
+                        </label>
+                    </div>
+                    <div class="container_password">
+                        <input class="login_input" id="login-password" placeholder="Mật khẩu" type="password">
+                        <div class="show_hide_container">
+                            <div class="show_hide_button">
+                                <span>
+                                    <i id="toggler" class="hide_password_icon"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button_login">
+                    <button>
+                        <span class="button_inner">
+                            <span>Đăng nhập</span>
+                        </span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>

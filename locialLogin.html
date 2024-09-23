@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div style="display: flex; justify-content: center; gap: 0px; color:white">
+        <div>
+            <h2>HTML</h2>
+            <pre>
+&lt;ul class=&quot;locial_login&quot;&gt;
+    &lt;li class=&quot;locial&quot;&gt;
+        &lt;button&gt;
+            &lt;span class=&quot;facebook&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;locial_text&quot;&gt;Tiếp tục bằng Facebook&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;locial&quot;&gt;
+        &lt;button&gt;
+            &lt;span class=&quot;google&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;locial_text&quot;&gt;Tiếp tục bằng Google&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;locial&quot;&gt;
+        &lt;button&gt;
+            &lt;span class=&quot;apple&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;locial_text&quot;&gt;Tiếp tục bằng Apple&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;locial&quot;&gt;
+        &lt;button&gt;
+            &lt;span class=&quot;locial_text&quot;&gt;Tiếp tục bằng số điện thoại&lt;/span&gt;
+        &lt;/button&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+            </pre>
+            <h2>CSS</h2>
+            <pre>
+.locial_login{
+    list-style: none;
+    padding: 0px;
+    text-indent: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 324px;
+    margin: 0px auto;
+    row-gap: normal;
+}
+.locial{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    text-indent: 0px;
+}
+.locial button{
+    margin-bottom: 8px;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: sans-serif;
+    background-color: transparent;
+    border-radius: 9999px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    touch-action: manipulation;
+    transition-duration: 33ms;
+    vertical-align: middle;
+    transform: translate3d(0px, 0px, 0px);
+    padding-block-start: calc(8px - 1px);
+    padding-block-end: calc(8px - 1px);
+    padding-inline-start: calc(32px - 1px);
+    padding-inline-end: calc(32px - 1px);
+    position: relative;
+    border: 1px solid #878787;
+    color: #000000;
+    min-inline-size: 0px;
+    min-block-size: 48px;
+    display: inline-flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    inline-size: 100%;
+}
+.locial button:hover{
+    border: 1px solid #ffffff;
+}
+.locial button:focus{
+    outline: 2px solid #ffffff;
+}
+.google{
+    background: url("https://accounts.scdn.co/sso/images/new-google-icon.
+    72fd940a229bc94cf9484a3320b3dccb.svg") center center no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.facebook{
+    background: url("https://accounts.scdn.co/sso/images/new-facebook-icon.
+    eae8e1b6256f7ccf01cf81913254e70b.svg") center center no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.apple{
+    background: url("https://accounts.scdn.co/sso/images/new-apple-icon.
+    e356139ea90852da2e60f1ff738f3cbb.svg") center center no-repeat;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.locial_text{
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-transform: none;
+    letter-spacing: normal;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    -webkit-box-align: center;
+    align-items: center;
+}
+            </pre>
+        </div>
+        <div class="box" style="justify-content: center;">
+            <ul class="locial_login">
+                <li class="locial">
+                    <button>
+                        <span class="facebook"></span>
+                        <span class="locial_text">Tiếp tục bằng Facebook</span>
+                    </button>
+                </li>
+                <li class="locial">
+                    <button>
+                        <span class="google"></span>
+                        <span class="locial_text">Tiếp tục bằng Google</span>
+                    </button>
+                </li>
+                <li class="locial">
+                    <button>
+                        <span class="apple"></span>
+                        <span class="locial_text">Tiếp tục bằng Apple</span>
+                    </button>
+                </li>
+                <li class="locial">
+                    <button>
+                        <span class="locial_text">Tiếp tục bằng số điện thoại</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

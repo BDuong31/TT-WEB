@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div style="display: flex; justify-content: center; gap: 200px; color:white">
+        <div>
+            <h2>HTML</h2>
+            <pre>
+&lt;header&gt;
+&lt;div&gt;
+    &lt;div class=&quot;forgot_password&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;
+            &lt;p&gt;Quên mật khẩu?&lt;/p&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;sign_up_section&quot;&gt;
+        &lt;h2&gt;
+            &lt;span&gt;Bạn chưa có tài khoản?&lt;/span&gt;
+            &lt;a href=&quot;signup.html&quot;&gt;
+                &lt;span&gt;Đăng ký Spotify&lt;/span&gt;
+            &lt;/a&gt;
+        &lt;/h2&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </pre>
+            <h2>CSS</h2>
+            <pre>
+.forgot_password{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 0px;
+    -webkit-box-align: end;
+    align-items: end;
+}
+.forgot_password a{
+    font-family: CircularSp, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+   -webkit-tap-highlight-color: transparent;
+   color: inherit;
+   -webkit-box-align: center;
+   align-items: center;
+}
+.forgot_password a:hover{
+    color: #20d760;
+}
+.forgot_password a p{
+    display: inline;
+    color: white;
+}
+.forgot_password a p:hover{
+    color: #20d760;
+}
+.sign_up_section{
+    padding: 16px 0px;
+
+}
+.sign_up_section h2{
+    text-align: center;
+}
+.sign_up_section h2 span{
+    margin-block: 0px;
+    color: #a7a7a7;
+    font-size: 1rem;
+    font-family: sans-serif;
+    font-weight: 400;
+}
+.sign_up_section a{
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    color: inherit;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.sign_up_section a:hover{
+    color: #20d760;
+}
+.sign_up_section a span{
+    margin-left: 8px;
+    margin-block: 0px;
+    color: inherit;
+}
+.sign_up_section a span:hover {
+   color: #20d760;
+}
+            </pre>
+        </div>
+        <div class="box" style="justify-content: center;">
+            <div>
+                <div class="forgot_password">
+                    <a href="#">
+                        <p>Quên mật khẩu?</p>
+                    </a>
+                </div>
+                <div class="sign_up_section">
+                    <h2>
+                         <span>Bạn chưa có tài khoản?</span>
+                         <a href="signup.html">
+                              <span>Đăng ký Spotify</span>
+                         </a>
+                    </h2>
+               </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
